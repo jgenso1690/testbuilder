@@ -33,8 +33,8 @@ describe('Introduction to Mocha Tests - READ ME FIRST', function() {
       return num/2 === 0;
     }
 
-    if(even(10) !== true) {
-      throw new Error('10 should be even!');
+    if(even(num) !== true) {
+      throw new Error('Not even!');
     }
   });
 });
