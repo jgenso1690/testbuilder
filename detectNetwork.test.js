@@ -170,7 +170,7 @@ var should = chai.should();
 
 
 describe('Maestro', function() {
-  ar should = chai.should();
+  var should = chai.should();
  var num = 5678901
   for (var cardlength = 12;cardlength<20 ;cardlength++ ){
 	num += '1';
