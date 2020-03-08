@@ -172,10 +172,11 @@ var should = chai.should();
 describe('Maestro', function() {
   var should = chai.should();
  var num = 5678901
-  for (var cardlength = 12;cardlength<20 ;cardlength++ ){
+  for (var cardlength = 12; cardlength<20 ;cardlength++ ){
 	num += '1';
-	(function(cardlength){
+	(function(num){
   it(`has a prefix of 5018 and a length of ${cardlength}`, function() {
+	
     detectNetwork('5018' + num ).should.equal('Maestro');
    });
   it(`has a prefix of 5020 and a length of ${cardlength}`, function() {
@@ -187,7 +188,7 @@ describe('Maestro', function() {
    it(`has a prefix of 6304 and a length of ${cardlength}`, function() {
     detectNetwork('6304' + num).should.equal('Maestro');
     });
-})(cardlength)
+})(num)
  };
 
 });
