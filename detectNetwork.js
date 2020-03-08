@@ -24,7 +24,7 @@ var detectNetwork = function(cardNumber) {
       return "Visa"
     }else if ((prefix2 === 65 || prefix4 === 6011 || (prefix3 >= 644 && prefix3 <= 649)) && (cardNumber.length === 16 || cardNumber.length === 19)){
     return 'Discover'
-    }else if((cardNumber.length >= 12 && cardNumber.length <= 19) && (prefix4 === "6011"||prefix4 === "5018"||prefix4 === "5020"||prefix4 === "5038"||prefix4 === "6304")){
+    }else if((cardNumber.length >= 12 && cardNumber.length <= 19) && (prefix4 === "5018"||prefix4 === "5020"||prefix4 === "5038"||prefix4 === "6304")){
       return "Maestro"
     }
     
