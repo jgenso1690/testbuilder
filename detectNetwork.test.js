@@ -149,7 +149,7 @@ var should = chai.should();
   for (var prefix3 = 644; prefix3 < 650 ; prefix3++){
    (function(prefix3) { 
      it('has a prefix of ' + prefix3 + ' and a length of 16');  
-     it('has a prefix of ' + prefix3 + ' and a length of 19');  })(prefix)   
+     it('has a prefix of ' + prefix3 + ' and a length of 19');  })(prefix3)   
   }
 
   it('has a prefix of 65 and a length of 16', function() {
