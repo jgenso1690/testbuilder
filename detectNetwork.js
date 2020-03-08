@@ -12,7 +12,7 @@ var detectNetwork = function(cardNumber) {
   var prefix2 = cardNumber.slice(0,2);
   var prefix3 = cardNumber.slice(0,3);
   var prefix4 = cardNumber.slice(0,4);
-  
+  var cardlength = cardNumber.length
   
   if (cardNumber.length === 14 && (prefix2 === "38" || prefix2 === "39" )){
      return "Diner's Club";
