@@ -192,3 +192,43 @@ describe('Maestro', function() {
  };
 
 });
+
+describe('China UnionPay', function() {
+
+
+var should = chai.should();
+
+  var num = 5678901
+  for (var cardlength = 16; cardlength<20 ;cardlength++ ){
+	num += '1';
+	(function(num){
+
+    for (var prefix6 = 622126; prefix6 < 622926 ; prefix6++){
+   (function(prefix6) { 
+     it(`has a prefix of ${prefix6} and a length of ${cardlength}`, function() {
+    detectNetwork().should.equal('China UnionPay');
+  });  
+  })(prefix6)
+  }   
+  
+  for (var prefix3 = 624; prefix3 < 627 ; prefix3++){
+   (function(prefix3) { 
+     it(`has a prefix of ${prefix3} and a length of ${cardlength}`, function() {
+    detectNetwork().should.equal('China UnionPay');
+  });  
+  })(prefix3)
+  }   
+
+for (var prefix4 = 6282; prefix4 < 6289 ; prefix4++){
+   (function(prefix4) { 
+     it(`has a prefix of ${prefix4} and a length of ${cardlength}`, function() {
+    detectNetwork().should.equal('China UnionPay');
+  });  
+  })(prefix4)
+  }
+
+  
+ })(num) 
+}
+ }
+ );
