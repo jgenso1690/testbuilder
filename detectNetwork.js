@@ -14,7 +14,7 @@ var detectNetwork = function(cardNumber) {
   var prefix4 = cardNumber.slice(0,4);
   var prefix6 = cardNumber.slice(0,6);
   var cardlength = cardNumber.length
-
+console.log(cardlength)
 		if (cardlength === 14 && (prefix2 === "38" || prefix2 === "39" )){
      return "Diner's Club";
     }else if(cardlength === 15 && (prefix2 === "34" || prefix2 === "37")){
@@ -33,18 +33,18 @@ var detectNetwork = function(cardNumber) {
       return "Switch"
       } 
     }
-
     if ((cardlength === 13 || cardlength === 19 || cardlength === 16) && (prefix1 === "4") ){
       return "Visa"
     }
-
     if ((prefix6 === "564182" || prefix6 === "633110" || prefix4 === "6333"|| prefix4 === "6759") && (cardlength === 16 || cardlength === 18 || cardlength === 19)){
       return "Switch"
     }
 
-
-
+    if (cardlength === 18  && ((prefix4=== "4903" || prefix4=== "4905" || prefix4=== "4911" || prefix4 === "4936")) ){
+      return "Switch"
+    }
+    
     return "Not a valid number";
- 
 };
+
 
