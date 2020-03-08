@@ -148,12 +148,12 @@ var should = chai.should();
 
   for (var prefix3 = 644; prefix3 < 650 ; prefix3++){
     it (`has a prefix of ${prefix3} and a length of 16`, function() {
-      detectNetwork(prefix3.toString() + '1567890123456').should.equal('Discover');	
+      detectNetwork(`${prefix3}1567890123456`).should.equal('Discover');	
     });
   }
   for (var prefix3 = 644; prefix3 < 650 ; prefix3++){
     it (`has a prefix of ${prefix3} and a length of 19`, function() {
-      detectNetwork(prefix3.toString() + '1567890123456789').should.equal('Discover');	
+      detectNetwork(`${prefix3}1567890123456789`).should.equal('Discover');	
     });
   }
 
