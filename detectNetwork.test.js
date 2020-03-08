@@ -186,5 +186,5 @@ describe('Maestro', function() {
    it(`has a prefix of 6304 and a length of ${cardlength}`, function() {
     detectNetwork('6304' + num).should.equal('Maestro');
     });
- });
+ };
 });
