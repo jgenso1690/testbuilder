@@ -249,3 +249,112 @@ for (var prefix4 = 6282; prefix4 < 6289 ; prefix4++){
 }
  }
  );
+
+
+describe('Switch', function() {
+
+var assert = chai.assert;
+ 
+
+  it('has a prefix of 4903 and a length of 16', function() {
+    assert(detectNetwork('4903567890123456') === 'Switch');
+  });
+
+  it('has a prefix of 4905 and a length of 16', function() {
+    assert(detectNetwork('4905567890123456') === 'Switch');
+  });
+
+  it('has a prefix of 4911 and a length of 16', function() {
+    assert(detectNetwork('4911567890123456') === 'Switch');
+  });
+
+  it('has a prefix of 4936 and a length of 16', function() {
+    assert(detectNetwork('4936567890123456') === 'Switch');
+  });
+
+  it('has a prefix of 564182 and a length of 16', function() {
+    assert(detectNetwork('5641827890123456') === 'Switch');
+  });
+
+  it('has a prefix of 6333 and a length of 16', function() {
+    assert(detectNetwork('6333567890123456') === 'Switch');
+  });
+  it('has a prefix of 6759 and a length of 16', function() {
+    assert(detectNetwork('6759567890123456') === 'Switch');
+  });
+  it('has a prefix of 633110 and a length of 16', function() {
+    assert(detectNetwork('6331107890123456') === 'Switch');
+  });
+
+ it('has a prefix of 4903 and a length of 18', function() {
+    assert(detectNetwork('490356789012345678') === 'Switch');
+  });
+
+  it('has a prefix of 4905 and a length of 18', function() {
+    assert(detectNetwork('490556789012345678') === 'Switch');
+  });
+
+  it('has a prefix of 4911 and a length of 18', function() {
+    assert(detectNetwork('491156789012345678') === 'Switch');
+  });
+
+  it('has a prefix of 4936 and a length of 18', function() {
+    assert(detectNetwork('493656789012345678') === 'Switch');
+  });
+
+  it('has a prefix of 564182 and a length of 18', function() {
+    assert(detectNetwork('564182789012345678') === 'Switch');
+  });
+
+  it('has a prefix of 6333 and a length of 18', function() {
+    assert(detectNetwork('633356789012345678') === 'Switch');
+  });
+  it('has a prefix of 6759 and a length of 18', function() {
+    assert(detectNetwork('675956789012345678') === 'Switch');
+  });
+  it('has a prefix of 633110 and a length of 18', function() {
+    assert(detectNetwork('633110789012345678') === 'Switch');
+  });
+
+ it('has a prefix of 4903 and a length of 19', function() {
+    assert(detectNetwork('4903567890123456789') === 'Switch');
+  });
+
+  it('has a prefix of 4905 and a length of 19', function() {
+    assert(detectNetwork('4905567890123456789') === 'Switch');
+  });
+
+  it('has a prefix of 4911 and a length of 19', function() {
+    assert(detectNetwork('4911567890123456789') === 'Switch');
+  });
+
+  it('has a prefix of 4936 and a length of 19', function() {
+    assert(detectNetwork('4936567890123456789') === 'Switch');
+  });
+
+  it('has a prefix of 564182 and a length of 19', function() {
+    assert(detectNetwork('5641827890123456789') === 'Switch');
+  });
+
+  it('has a prefix of 6333 and a length of 19', function() {
+    assert(detectNetwork('6333567890123456789') === 'Switch');
+  });
+  it('has a prefix of 6759 and a length of 19', function() {
+    assert(detectNetwork('6759567890123456789') === 'Switch');
+  });
+  it('has a prefix of 633110 and a length of 19', function() {
+    assert(detectNetwork('6331107890123456789') === 'Switch');
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
