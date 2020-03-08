@@ -170,6 +170,21 @@ var should = chai.should();
 
 
 describe('Maestro', function() {
-  // Write full test coverage for the Maestro card
+  ar should = chai.should();
+ var num = 5678901
+  for (var cardlength = 12;cardlength<20 ;cardlength++ ){
+	num += '1';
+  it(`has a prefix of 5018 and a length of ${cardlength}`, function() {
+    detectNetwork('5018' + num ).should.equal('Maestro');
+   });
+  it(`has a prefix of 5020 and a length of ${cardlength}`, function() {
+    detectNetwork('5020' + num).should.equal('Maestro');
+   });
+  it(`has a prefix of 5038 and a length of ${cardlength}`, function() {
+    detectNetwork('5038' + num).should.equal('Maestro');
+    });
+   it(`has a prefix of 6304 and a length of ${cardlength}`, function() {
+    detectNetwork('6304' + num).should.equal('Maestro');
+    });
+ });
 });
-
