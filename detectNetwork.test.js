@@ -146,17 +146,17 @@ var should = chai.should();
     detectNetwork('6011567890123456789').should.equal('Discover');
   });
 
-   for (var prefix = 644; prefix < 650; prefix++) {
-    it('has a prefix of ' + prefix + ' and a length of 16', function() {
-      detectNetwork(prefix.toString() + '1234567890123').should.equal('Discover');
-    });
+  for (var prefix3 = 644; prefix3 < 650 ; prefix3++){
+   (function(prefix3) { 
+     it('has a prefix of ' + prefix3 + ' and a length of 16', function() {
+    detectNetwork(prefix3 +'4567890123456').should.equal('Discover');
+  });  
+     it('has a prefix of ' + prefix3 + ' and a length of 19', function() {
+    detectNetwork(prefix3 +'4567890123456789').should.equal('Discover');
+  });
+  })(prefix3)   
+  
   }
-  for (var prefix = 644; prefix < 650; prefix++) {
-    it('has a prefix of ' + prefix + ' and a length of 19', function() {
-      detectNetwork(prefix.toString() + '1234567890123456').should.equal('Discover');
-    });
-  }
-
   it('has a prefix of 65 and a length of 16', function() {
     detectNetwork('6534567890123456').should.equal('Discover');
   });
