@@ -12,28 +12,39 @@ var detectNetwork = function(cardNumber) {
   var prefix2 = cardNumber.slice(0,2);
   var prefix3 = cardNumber.slice(0,3);
   var prefix4 = cardNumber.slice(0,4);
+  var prefix6 = cardNumber.slice(0,6);
   var cardlength = cardNumber.length
-  
-  if (cardNumber.length === 14 && (prefix2 === "38" || prefix2 === "39" )){
+
+		if (cardlength === 14 && (prefix2 === "38" || prefix2 === "39" )){
      return "Diner's Club";
-    }else if(cardNumber.length === 15 && (prefix2 === "34" || prefix2 === "37")){
+    }else if(cardlength === 15 && (prefix2 === "34" || prefix2 === "37")){
 	return "American Express";
-    }else if(cardNumber.length === 16 && (prefix2 >= "51" && prefix2 <= "55")){
+    }else if(cardlength === 16 && (prefix2 >= "51" && prefix2 <= "55")){
       return "MasterCard"
-    }else if((cardNumber.length === 13 ||cardNumber.length === 16 ||cardNumber.length === 19) && (prefix1 === "4")){
-      return "Visa"
-    }else if ((prefix2 === "65" || prefix4 === "6011" || (prefix3 >= "644" && prefix3 <= "649")) && (cardNumber.length === 16 || cardNumber.length === 19)){
+    }else if ((prefix2 === "65" || prefix4 === "6011" || (prefix3 >= "644" && prefix3 <= "649")) && (cardlength === 16 || cardlength === 19)){
     return 'Discover'
-    }else if((cardNumber.length >= 12 && cardNumber.length <= 19) && (prefix4 === "5018"||prefix4 === "5020"||prefix4 === "5038"||prefix4 === "6304")){
+    }else if((cardlength >= 12 && cardlength <= 19) && (prefix4 === "5018"||prefix4 === "5020"||prefix4 === "5038"||prefix4 === "6304")){
       return "Maestro"
+    }else if(((prefix6 >= "622126" && prefix6< "622926") || (prefix3 >= "624" && prefix3< "627") || (prefix4 >="6282" && prefix4 < "6289")) && (cardlength >= 16 && cardlength<20)) {
+      return "China UnionPay"
     }
-    
+    if (cardlength === 16 || cardlength === 19){ 
+      if (prefix4=== "4903" || prefix4=== "4905" || prefix4=== "4911" || prefix4 === "4936"){
+      return "Switch"
+      } 
+    }
+
+    if ((cardlength === 13 || cardlength === 19 || cardlength === 16) && (prefix1 === "4") ){
+      return "Visa"
+    }
+
+    if ((prefix6 === "564182" || prefix6 === "633110" || prefix4 === "6333"|| prefix4 === "6759") && (cardlength === 16 || cardlength === 18 || cardlength === 19)){
+      return "Switch"
+    }
+
+
+
     return "Not a valid number";
-  // Note: `cardNumber` will always be a string
-  // The Diner's Club network always starts with a 38 or 39 and is 14 digits long
-  // The American Express network always starts with a 34 or 37 and is 15 digits long
-
-  // Once you've read this, go ahead and try to implement this function, then return to the console.
+ 
 };
-
 
