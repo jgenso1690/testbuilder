@@ -206,7 +206,7 @@ var should = chai.should();
     for (var prefix6 = 622126; prefix6 < 622926 ; prefix6++){
    (function(prefix6) { 
      it(`has a prefix of ${prefix6} and a length of ${cardlength}`, function() {
-    detectNetwork().should.equal('China UnionPay');
+    detectNetwork(prefix6+ num).should.equal('China UnionPay');
   });  
   })(prefix6)
   }   
@@ -214,7 +214,7 @@ var should = chai.should();
   for (var prefix3 = 624; prefix3 < 627 ; prefix3++){
    (function(prefix3) { 
      it(`has a prefix of ${prefix3} and a length of ${cardlength}`, function() {
-    detectNetwork().should.equal('China UnionPay');
+    detectNetwork(prefix3+ num).should.equal('China UnionPay');
   });  
   })(prefix3)
   }   
@@ -222,7 +222,7 @@ var should = chai.should();
 for (var prefix4 = 6282; prefix4 < 6289 ; prefix4++){
    (function(prefix4) { 
      it(`has a prefix of ${prefix4} and a length of ${cardlength}`, function() {
-    detectNetwork().should.equal('China UnionPay');
+    detectNetwork(prefix4+ num).should.equal('China UnionPay');
   });  
   })(prefix4)
   }
