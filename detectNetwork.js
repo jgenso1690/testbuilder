@@ -14,15 +14,15 @@ var detectNetwork = function(cardNumber) {
   var prefix4 = cardNumber.slice(0,4);
   
   
-		if (cardNumber.length === 14 && (prefix2 === "38" || prefix2 === "39" )){
+  if (cardNumber.length === 14 && (prefix2 === "38" || prefix2 === "39" )){
      return "Diner's Club";
     }else if(cardNumber.length === 15 && (prefix2 === "34" || prefix2 === "37")){
 	return "American Express";
-    }else if(cardNumber.length === 16 && (prefix2 >= 51 && prefix2 <= 55)){
+    }else if(cardNumber.length === 16 && (prefix2 >= "51" && prefix2 <= "55")){
       return "MasterCard"
     }else if((cardNumber.length === 13 ||cardNumber.length === 16 ||cardNumber.length === 19) && (prefix1 === "4")){
       return "Visa"
-    }else if ((prefix2 === 65 || prefix4 === 6011 || (prefix3 >= 644 && prefix3 <= 649)) && (cardNumber.length === 16 || cardNumber.length === 19)){
+    }else if ((prefix2 === "65" || prefix4 === "6011" || (prefix3 >= "644" && prefix3 <= "649")) && (cardNumber.length === 16 || cardNumber.length === 19)){
     return 'Discover'
     }else if((cardNumber.length >= 12 && cardNumber.length <= 19) && (prefix4 === "5018"||prefix4 === "5020"||prefix4 === "5038"||prefix4 === "6304")){
       return "Maestro"
