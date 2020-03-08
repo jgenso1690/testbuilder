@@ -163,8 +163,9 @@ var should = chai.should();
   it('has a prefix of 65 and a length of 19', function() {
     detectNetwork('6534567890123456789').should.equal('Discover');
   });
-
 });
+
+
 
 
 
@@ -173,7 +174,6 @@ describe('Maestro', function() {
  var num = 5678901
   for (var cardlength = 12;cardlength<20 ;cardlength++ ){
 	num += '1';
-	(function(cardlength){
   it(`has a prefix of 5018 and a length of ${cardlength}`, function() {
     detectNetwork('5018' + num ).should.equal('Maestro');
    });
@@ -186,7 +186,5 @@ describe('Maestro', function() {
    it(`has a prefix of 6304 and a length of ${cardlength}`, function() {
     detectNetwork('6304' + num).should.equal('Maestro');
     });
-})(carlength)
  };
-
 });
