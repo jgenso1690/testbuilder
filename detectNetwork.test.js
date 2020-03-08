@@ -154,7 +154,7 @@ var should = chai.should();
      it('has a prefix of ' + prefix3 + ' and a length of 19', function() {
     detectNetwork(prefix3 +'4567890123456789').should.equal('Discover');
   });
-  }) 
+  })(prefix3)   
   
   }
   it('has a prefix of 65 and a length of 16', function() {
