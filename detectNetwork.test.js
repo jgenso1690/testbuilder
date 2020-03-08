@@ -229,7 +229,8 @@ var num = 456789012345
    })(num) 
 }
 
-var num = 5678901012345
+var num = 567890101234
+	  
   for (var cardlength = 16; cardlength<20 ;cardlength++ ){
 	num += '1';
 	(function(num){
