@@ -8,10 +8,12 @@
 //   2. The number of digits in the number (called the length)
 
 var detectNetwork = function(cardNumber) {
-	var prefix = cardNumber[0..2];
-		if (cardNumber.length === 14 && (prefix === 38 || prefix === 39)){
-		return "Diner's CLub";
-	}else if(cardNumber.length === 15 && (prefix === 34 || prefix === 37)){
+	var prefix = cardNumber[0]+cardNumber[1];
+  
+		if (cardNumber.length === 14 && (prefix === "38" || prefix === "39" )){
+      
+		return "Diner's Club";
+	}else if(cardNumber.length === 15 && (prefix === "34" || prefix === "37")){
 	return "American Express";
 }
 
